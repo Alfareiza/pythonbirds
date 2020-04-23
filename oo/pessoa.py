@@ -15,6 +15,11 @@ if __name__ == '__main__':
     print(Gilma.cumprimentar())
     print(Gilma.nome) #Aqui acceso a un atributo del objeto P
     print(Gilma.age) # Imprimo el atributo age del objeto p
-
     for sons in Ida.sons:
         print(sons.nome)
+    Ida.sobrenome = 'Blanco'
+    del Ida.sons
+    print (Ida.__dict__)
+    print (Gilma.__dict__)
+
+
