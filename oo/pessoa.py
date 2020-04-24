@@ -8,6 +8,11 @@ class Pessoa:
     def cumprimentar(self):
         return f'Hola {id(self)}'
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
 if __name__ == '__main__':
     Gilma = Pessoa(nome='Gilma',age=61) #Aqui estoy creando/construyendo un objeto Gilma con la plantilla de la clase Pessoa, por ende se ejecuta el método init
     Arturo = Pessoa(nome ='Arturo')
@@ -25,6 +30,8 @@ if __name__ == '__main__':
     print(Gilma.ojos)
     print(Ida.ojos)
     print(Pessoa.ojos)
+    print(Pessoa.metodo_estatico())
+    print(Ida.metodo_estatico())
 
 
 
