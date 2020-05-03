@@ -13,6 +13,9 @@ class Pessoa:
         return 42
 
     @classmethod
+    def nome_atributos_de_clase(cls):
+        return f'{cls} - ojos {cls.ojos}'
+
 if __name__ == '__main__':
     Gilma = Pessoa(nome='Gilma',age=61) #Aqui estoy creando/construyendo un objeto Gilma con la plantilla de la clase Pessoa, por ende se ejecuta el método init
     Arturo = Pessoa(nome ='Arturo')
@@ -32,6 +35,8 @@ if __name__ == '__main__':
     print(Pessoa.ojos)
     print(Pessoa.metodo_estatico())
     print(Ida.metodo_estatico())
+    print(Pessoa.nome_atributos_de_clase())
+    print(Gilma.nome_atributos_de_clase())
 
 
 
