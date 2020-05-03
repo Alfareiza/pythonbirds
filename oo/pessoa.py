@@ -16,9 +16,15 @@ class Pessoa:
     def nome_atributos_de_clase(cls):
         return f'{cls} - ojos {cls.ojos}'
 
+class Mulher(Pessoa):
+    pass
+
+class Mutante(Pessoa):
+    ojos = 3
+
 if __name__ == '__main__':
-    Gilma = Pessoa(nome='Gilma',age=61) #Aqui estoy creando/construyendo un objeto Gilma con la plantilla de la clase Pessoa, por ende se ejecuta el método init
-    Arturo = Pessoa(nome ='Arturo')
+    Gilma = Mutante(nome='Gilma',age=61) #Aqui estoy creando/construyendo un objeto Gilma con la plantilla de la clase Pessoa, por ende se ejecuta el método init
+    Arturo = Mulher(nome ='Arturo')
     Ida = Pessoa(Gilma, Arturo,nome='Ida',
                    age=88)  # Aqui estoy creando/construyendo un objeto p con la plantilla de la clase Pessoa, por ende se ejecuta el método init\
     print(Gilma.cumprimentar())
@@ -37,6 +43,10 @@ if __name__ == '__main__':
     print(Ida.metodo_estatico())
     print(Pessoa.nome_atributos_de_clase())
     print(Gilma.nome_atributos_de_clase())
-
-
+    pessoa = Pessoa('Anónimo')
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(pessoa, Mulher))
+    print(isinstance(Gilma, Pessoa))
+    print(isinstance(Gilma, Mulher))
+    print(Gilma.ojos)
 
